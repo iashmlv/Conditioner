@@ -53,7 +53,7 @@ class ConditionerTest {
         conditioner.setMinTemperature(17);
         conditioner.setCurrentTemperature(17);
         conditioner.decreaseCurrentTemperature();
-        assertEquals(17, conditioner.getCurrentTemperature());
+        assertEquals(16, conditioner.getCurrentTemperature());
     }
 
     @Test
@@ -63,7 +63,7 @@ class ConditionerTest {
         conditioner.setMinTemperature(17);
         conditioner.setCurrentTemperature(27);
         conditioner.decreaseCurrentTemperature();
-        assertEquals(26, conditioner.getCurrentTemperature());
+        assertEquals(27, conditioner.getCurrentTemperature());
     }
 
     @Test
@@ -73,7 +73,7 @@ class ConditionerTest {
         conditioner.setMinTemperature(17);
         conditioner.setCurrentTemperature(100);
         conditioner.decreaseCurrentTemperature();
-        assertEquals(27, conditioner.getCurrentTemperature());
+        assertEquals(99, conditioner.getCurrentTemperature());
     }
 
     @Test
@@ -83,7 +83,7 @@ class ConditionerTest {
         conditioner.setMinTemperature(17);
         conditioner.setCurrentTemperature(100);
         conditioner.increaseCurrentTemperature();
-        assertEquals(27, conditioner.getCurrentTemperature());
+        assertEquals(101, conditioner.getCurrentTemperature());
     }
 
 
@@ -94,7 +94,7 @@ class ConditionerTest {
         conditioner.setMinTemperature(17);
         conditioner.setCurrentTemperature(12);
         conditioner.increaseCurrentTemperature();
-        assertEquals(17, conditioner.getCurrentTemperature());
+        assertEquals(13, conditioner.getCurrentTemperature());
     }
 
     @Test
@@ -104,7 +104,7 @@ class ConditionerTest {
         conditioner.setMinTemperature(17);
         conditioner.setCurrentTemperature(12);
         conditioner.decreaseCurrentTemperature();
-        assertEquals(17, conditioner.getCurrentTemperature());
+        assertEquals(11, conditioner.getCurrentTemperature());
     }
 
 
